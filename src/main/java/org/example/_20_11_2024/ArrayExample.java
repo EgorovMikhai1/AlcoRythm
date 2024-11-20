@@ -1,4 +1,4 @@
-package org.example;
+package org.example._20_11_2024;
 
 public class ArrayExample {
     public static void main(String[] args) {
