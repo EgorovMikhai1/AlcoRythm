@@ -34,7 +34,7 @@ public class Prime1 {
     }
 
     public static void main(String[] args) {
-        int n = 112;
+        int n = 111;
         System.out.println(isPrime(n));
     }
 }
