@@ -1,5 +1,9 @@
 package org.example._11_12_2024;
 
+import org.example._18_12_2024.QuickSort;
+
+import java.util.Random;
+
 public class BubbleSort {
 
     public static void bubbleSortOpt(int[] array) {
@@ -40,10 +44,10 @@ public class BubbleSort {
     }
 
     public static int[] getArr() {
-        int n = 100_000_000;
+        int n = 100_000;
         int[] arr = new int[n];
         for (int i = 0; i < n; i++) {
-            arr[i] = i;
+            arr[i] = new Random().nextInt(10000);
         }
         return arr;
     }
@@ -58,8 +62,8 @@ public class BubbleSort {
         System.out.println("BS: " + (bsEndTime - bsStartTime));
 
         long bsOOStartTime = System.currentTimeMillis();
-        bubbleSortOpt(arrOO);
+        QuickSort.sort(arrOO, 0, arrOO.length - 1);
         long bsOOEndTime = System.currentTimeMillis();
-        System.out.println("BS OO: " + (bsOOEndTime - bsOOStartTime));
+        System.out.println("BS QUICK: " + (bsOOEndTime - bsOOStartTime));
     }
 }
